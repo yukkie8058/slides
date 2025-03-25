@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node-terminal",
+      "name": "Open",
+      "request": "launch",
+      "command": "pnpm run dev ${workspaceFolder}/slides/${input:slideName}/${input:slideName}.md",
+      "cwd": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "slideName",
+      "type": "promptString",
+      "description": "Slide name"
+    }
+  ]
+}
