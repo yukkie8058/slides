@@ -16,13 +16,13 @@ export default defineTransformersSetup(() => {
 
 function envTransformer(): MarkdownTransformer {
   return (ctx: MarkdownTransformContext) => {
-    ctx.s.replaceAll(/%([^ ]+?)%/g, (str, key) => {
+    ctx.s.replaceAll(/%([^ ]+?)%/g, (_, key) => {
       if (typeof key !== 'string') throw new TypeError()
       if (process.env[key] != null) {
         return process.env[key]
       } else {
         console.warn(`Undefined environment variable: ${key}`)
-        return str
+        return ''
       }
     })
   }
