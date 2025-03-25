@@ -1,0 +1,31 @@
+{
+  "name": "slides",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "zx build.mjs",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.39.0",
+    "@slidev/cli": "^51.4.0",
+    "@slidev/client": "^51.4.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "@vue-youtube/core": "^0.0.6",
+    "@vueuse/core": "^13.0.0",
+    "unocss": "66.1.0-beta.6",
+    "vue": "^3.5.13",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-vue": "^10.0.0",
+    "globals": "^16.0.0",
+    "typescript-eslint": "^8.26.1",
+    "zx": "8.4.1"
+  }
+}
